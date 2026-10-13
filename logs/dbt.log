@@ -1,0 +1,54 @@
+[0m13:33:18.696155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7097256f7e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70972584bd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70972571bb10>]}
+
+
+============================== 13:33:18.714374 | 8d122eb2-b32c-4ed9-93b1-aa926dcc3659 ==============================
+[0m13:33:18.714374 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:33:18.722524 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt build --profiles-dir /app', 'cache_selected_only': 'False', 'log_format': 'default', 'profiles_dir': '/app', 'target_path': 'None', 'warn_error': 'None', 'version_check': 'True', 'hints_enabled': 'True', 'partial_parse': 'True', 'empty': 'False', 'write_json': 'True', 'printer_width': '80', 'use_experimental_parser': 'False', 'quiet': 'False', 'indirect_selection': 'eager', 'use_colors': 'True', 'maximum_seed_size_mib': '1', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'log_path': '/app/logs', 'debug': 'False', 'no_print': 'None', 'static_parser': 'True'}
+[0m13:33:18.762329 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  dbt cannot run because no profile was specified for this dbt project.
+  To specify a profile for this project, add a line like the this to
+  your dbt_project.yml file:
+  
+  profile: [profile name]
+  
+  Here, [profile name] should be replaced with a profile name
+  defined in your profiles.yml file. You can find profiles.yml here:
+  
+  /app/profiles.yml
+  
+[0m13:33:18.769920 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 0.28350058, "process_in_blocks": "5280", "process_kernel_time": 0.560936, "process_mem_max_rss": "110208", "process_out_blocks": "2192", "process_user_time": 3.026633}
+[0m13:33:18.775269 [debug] [MainThread]: Command `dbt build` failed at 13:33:18.774772 after 0.29 seconds
+[0m13:33:18.779282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7097256f7590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x709725966810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7097256e3e50>]}
+[0m13:33:18.783447 [debug] [MainThread]: Flushing usage events
+[0m13:33:20.365456 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:40:12.068456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d3cb7c1c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d3cb7b03d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d3cb732c10>]}
+
+
+============================== 13:40:12.083520 | 015a1e5f-af42-41f1-b43f-3a067c13df3e ==============================
+[0m13:40:12.083520 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:40:12.088288 [debug] [MainThread]: running dbt with arguments {'hints_enabled': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': '/app/logs', 'no_print': 'None', 'use_experimental_parser': 'False', 'version_check': 'True', 'fail_fast': 'False', 'write_json': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'warn_error': 'None', 'target_path': 'None', 'debug': 'False', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'profiles_dir': '/app', 'static_parser': 'True', 'empty': 'False', 'introspect': 'True', 'maximum_seed_size_mib': '1', 'use_colors': 'True', 'invocation_command': 'dbt build --profiles-dir /app'}
+[0m13:40:12.117218 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Could not find profile named 'nyc_taxi_pipeline'
+[0m13:40:12.122125 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 0.27998063, "process_in_blocks": "0", "process_kernel_time": 0.663628, "process_mem_max_rss": "110388", "process_out_blocks": "2192", "process_user_time": 2.678498}
+[0m13:40:12.125719 [debug] [MainThread]: Command `dbt build` failed at 13:40:12.125467 after 0.28 seconds
+[0m13:40:12.128664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d3cb7172d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d3cb76df50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d3cb7b7c90>]}
+[0m13:40:12.131698 [debug] [MainThread]: Flushing usage events
+[0m13:40:13.448250 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:42:07.524391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74075fd2d8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74075fe7bb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74075fd2dd10>]}
+
+
+============================== 13:42:07.538177 | 39386ac0-7010-4a6f-bf73-38af97c317c2 ==============================
+[0m13:42:07.538177 [info ] [MainThread]: Running with dbt=1.12.5
+[0m13:42:07.542177 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'maximum_seed_size_mib': '1', 'empty': 'False', 'log_path': '/app/logs', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt build --profiles-dir /app', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'fail_fast': 'False', 'warn_error': 'None', 'quiet': 'False', 'hints_enabled': 'True', 'debug': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'profiles_dir': '/app', 'write_json': 'True', 'partial_parse': 'True', 'use_colors': 'True', 'no_print': 'None', 'printer_width': '80', 'static_parser': 'True'}
+[0m13:42:08.108375 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  at path []: Additional properties are not allowed ('default-materialized' was unexpected)
+
+Error encountered in /app/dbt_project.yml
+[0m13:42:08.112673 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 0.78941864, "process_in_blocks": "0", "process_kernel_time": 0.628992, "process_mem_max_rss": "143028", "process_out_blocks": "2192", "process_user_time": 2.922029}
+[0m13:42:08.115763 [debug] [MainThread]: Command `dbt build` failed at 13:42:08.115446 after 0.79 seconds
+[0m13:42:08.119522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x740753f00d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74075fd2fc90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74075fd2fe10>]}
+[0m13:42:08.124433 [debug] [MainThread]: Flushing usage events
+[0m13:42:09.581319 [debug] [MainThread]: An error was encountered while trying to flush usage events

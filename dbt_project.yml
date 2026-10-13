@@ -1,0 +1,23 @@
+name: nyc_taxi_pipeline
+version: '1.0'
+config-version: 2
+profile: nyc_taxi_pipeline
+
+# Define model paths and materializations
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+
+vars:
+  data_path: "{{ env_var('DATA_PATH', './data') }}"
+
+default-materialized: view
+
+models:
+  nyc_taxi_pipeline:
+    staging:
+      materialized: view
+    intermediate:
+      materialized: view
+    marts:
+      materialized: table

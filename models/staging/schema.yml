@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  nyc_taxi_pipeline:
+    staging:
+      stg_yellow_tripdata:
+        columns:
+          - name: trip_id
+            tests:
+              - unique
+              - not_null
+          - name: pickup_location_id
+            tests:
+              - not_null
+          - name: dropoff_location_id
+            tests:
+              - not_null
+          - name: payment_type
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [1, 2, 3, 4, 5, 6]
+      stg_taxi_zone_lookup:
+        columns:
+          - name: location_id
+            tests:
+              - unique
+              - not_null
+    # Custom test will be added as a singular test file

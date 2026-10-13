@@ -1,0 +1,12 @@
+nyc_taxi_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('DUCKDB_PATH', 'my_project.duckdb') }}"
+      extensions:
+        - json
+      threads: 4
+      # optional memory limit
+      # memory_limit: "2GB"
+      settings: {}

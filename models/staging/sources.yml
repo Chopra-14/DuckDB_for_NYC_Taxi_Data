@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: nyc_taxi
+    tables:
+      - name: yellow_tripdata
+        description: "Yellow Taxi trip data in Parquet format"
+        meta:
+          path: "{{ var('data_path') }}/yellow_tripdata.parquet"
+      - name: taxi_zone_lookup
+        description: "Taxi zone lookup CSV"
+        meta:
+          path: "{{ var('data_path') }}/taxi_zone_lookup.csv"
